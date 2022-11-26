@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>うさぎ珈琲店</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://kit.fontawesome.com/610fa789f3.js" crossorigin="anonymous"></script>
+
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<body>
+<!--js ヘッダー・ハンバーガーメニュー-->
+  <div class="container">
+  <header class="header">
+    <!--sp-->
+    <div class="header__inner">
+      <h1 class="header__title header-title">
+        <a href="#"><img src="img/logo.png" class="headerLogo" alt="うさぎ珈琲店"></a>
+      </h1>
+      
+      <nav class="header__nav nav" id="js-nav">
+        <h1 class="hamburger__title">
+          <a href="#"><img src="img/logoB.png" class="hamburgerLogo" alt="うさぎ珈琲店"></a>
+        </h1>
+        <ul class="nav-items">
+          <li class="nav-items__item"><a href="index.html#about">うさぎ珈琲について</a></li>
+          <li class="nav-items__item"><a href="index.html#obs">こだわり</a></li>
+          <li class="nav-items__item"><a href="imdex.html#menu">メニュー</a></li>
+          <li class="nav-items__item"><a href="index.html#shop">店舗情報</a></li>
+        </ul>
+      </nav>
+      <button class="header__hamburger hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!--pc-->
+  <nav class="pc-nav">
+    <h1 class="hamburger__title">
+          <a href="#"><img src="img/logo.png" class="hamburgerLogo" alt="うさぎ珈琲店"></a>
+        </h1>
+    <ul class="pc-nav-items" id="pc-nav-items">
+      <li class="pc-nav-items"><a href="#about">うさぎ珈琲について</a></li>
+      <li class="pc-nav-items"><a href="#obs">こだわり</a></li>
+      <li class="pc-nav-items"><a href="#menu">メニュー</a></li>
+      <li class="pc-nav-items"><a href="#shop">店舗情報</a></li>
+    </ul>
+  </nav>
+  </header>  
+  </div>
+
+  
+
+
+ <!--*js ローディング画面-->
+ <div id="js-loader" class="loader">
+  <img src="img/logoB.png">
+ </div>
+
+<main>
+  <!--ページトップボタン-->
+  <div id="page_top">
+    <a href="#"></a>
+  </div>
+
+  <!--ビジュアル-->
+  <div class="visual">
+    <p>じっくり焙煎した<br>こだわり珈琲で<br>上質なひと時</p>
+  </div>
+
+
+  <!--うさぎ珈琲店について-->
+  <section id="about" class="about fade-in fade-in-right">
+    <h2>うさぎ珈琲店</h2>
+      <p>うさぎ珈琲店は1996年に開店した小さな喫茶店です。<br>
+      県道沿いの傍に佇み、地元の方から永年愛されています。<br>
+      じっくり焙煎した珈琲の香りをごゆっくりとお愉しみください。<br>
+      また毎日手作りしているお菓子もご用意しています。こだわりの詰まったうさぎ珈琲で上質なひと時をお過ごしください。</p>
+  </section>
+
+
+  <!--こだわり〜珈琲について-->
+  <section id="obs" class="coffee fade-in fade-in-left">
+    <h2>珈琲</h2>
+    <div class="obs">
+      <img src="img/coffee.jpg" alt="">
+       <p>皆さまに上質なひと時をお過ごしいただくため店主が厳選した豆を使用しています。<br>
+      ホットコーヒーはご注文をいただいてから1杯1杯ていねいにドリップしており深い味わいが特徴です。<br>
+      アイスコーヒーは長野県の天然水を使用してじっくり抽出しており、すっきりとした味わいです。</p>
+      </div>
+  </section>
+  <!--こだわり〜お菓子-->
+  <section class="lunch">
+    <h2>お菓子</h2>
+    <div class="obs">
+      <img src="img/monaka.jpg" alt="">
+    <p>うさぎ珈琲店では、こだわりの珈琲に合うお菓子を手作りしています。<br>
+      その中でもうさぎ最中は毎日売り切れてしまうほどの人気のお菓子です。<br>
+      最中の中には珈琲と相性ぴったりな程よい甘さのあんこがたっぷり詰まっています。</p>
+      </div>
+  </section>
+
+
+  <!--メニュー-->
+  <section id="menu" class="menu fade-in fade-in-right">
+    <div class="menu">
+      <h2>メニュー</h2>
+      <div class="menu_drink">
+        <span>・ドリンク・</span>
+        <dl class="menu">
+          <div>
+           <dt>ホットコーヒー</dt>
+           <dd>380円</dd>
+          </div> 
+          <div> 
+           <dt>アイスコーヒー</dt>
+           <dd>400円</dd>
+          </div>
+          <div> 
+           <dt>カフェオレ</dt>
+           <dd>420円</dd>
+          </div>
+          <div>
+           <dt>カフェモカ</dt>
+           <dd>420円</dd>
+          </div>
+          <div>
+           <dt>キャラメルマキアート</dt>
+           <dd>430円</dd>
+          </div>
+          <div> 
+           <dt>抹茶オレ</dt>
+           <dd>430円</dd>
+          </div>
+          <div>
+           <dt>オレンジジュース</dt>
+           <dd>420円</dd>
+          </div>
+          <div> 
+            <dt>メロンソーダ</dt>
+            <dd>420円</dd>
+          </div>
+          <div>  
+            <dt>ジンジャーエール</dt>
+            <dd>410円</dd>
+          </div>  
+        </dl>
+      </div>
+      <div class="menu_lunch">
+        <span>・軽食・</span>
+        <dl class="menu">
+          <div>
+            <dt>うさぎ最中</dt>
+            <dd>410円</dd>
+          </div>
+          <div>
+            <dt>チーズケーキ</dt>
+            <dd>580円</dd>
+          </div>
+          <div>  
+            <dt>プリンアラモード</dt>
+            <dd>580円</dd>
+          </div>
+          <div>  
+            <dt>ホットケーキ</dt>
+            <dd>700円</dd>  
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+
+  <!--お店情報-->
+  <section id="shop" class="shop fade-in fade-in-left">
+    <h2>店舗情報</h2>
+    <div class="map">
+     <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357.2604387656619!2d138.6153996105233!3d36.32716359294326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601dd3146dc9072d%3A0x56a6db17f0786b85!2z44CSMzg5LTAxMTEg6ZW36YeO55yM5YyX5L2Q5LmF6YOh6Lu95LqV5rKi55S66ZW35YCJ77yW77yS77yY4oiS77yR77yS!5e0!3m2!1sja!2sjp!4v1668833852449!5m2!1sja!2sjp" width="auto" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="shopInfo">
+        <table>
+        <tr>
+          <th></th>
+        </tr>
+        <tr>
+          <td>住所</td>
+          <td>長野県軽井沢町</td>
+        </tr>
+        <tr>
+          <td>電話</td>
+          <td>0000000000</td>
+        </tr>
+        <tr>
+          <td>営業日時</td>
+          <td>09:030〜18:00</td>
+        </tr>
+        <tr>
+          <td>店休日</td>
+          <td>水曜日</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+ </main>
+
+  <!--フッター-->
+<footer>
+  <div class="footer">
+  <div class="footer_nav">
+    <h1><a href="#"><img src="img/logo.svg" alt=""></a></h1>
+      <nav>
+        <ul class="footer__nav">
+          <li><a href="#about">うさぎ珈琲店について</a></li>
+          <li><a href="#obs">こだわり</a></li>
+          <li><a href="#menu">メニュー</a></li>
+          <li><a href="#shop">店舗情報</a></li>
+        </ul>
+        <div class="sns">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div> 
+      </nav> 
+  </div> 
+  </div>
+  <small>&copy;2022 うさぎ珈琲店 All Rights Reserved.</small>   
+</footer>
+
+
+<script src="main.js"></script>
+<script src="jquery-3.6.1.min.js"></script>
+<!-- <script src="script.js"></script> -->
+
+</body>
+</html>
