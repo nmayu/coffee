@@ -233,7 +233,7 @@ html{
 
 /*ビジュアル*/
 .visual{
-  background-image: url("https://github.com/nmayu/coffee/blob/main/sp.png");
+  background-image: url("https://nmayu.github.io/coffee/sp.png");
   height:100vh;
 }
 .visual p{
@@ -311,7 +311,7 @@ dl.menu dd{
 
 /*フッター*/
 .footer{
-  background-image: url("https://github.com/nmayu/coffee/blob/main/visual.jpg");
+  background-image: url("https://nmayu.github.io/coffee/visual.jpg");
   padding: 16px;
 }
 .footer_nav{
@@ -383,7 +383,7 @@ small{
 
   /*ビジュアル*/
   .visual{
-    background-image: url("https://github.com/nmayu/coffee/blob/main/pc.png");
+    background-image: url("https://nmayu.github.io/coffee/pc.png");
     background-size: cover;
   }
 
