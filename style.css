@@ -1,0 +1,419 @@
+@charset "UTF-8";
+/*min-width:モバイルファースト*/
+
+*{margin:0;
+padding:0;
+list-style:none;
+box-sizing:border-box;
+font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+}
+a{
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+section{
+  margin:30px 24px;
+  padding:50px 0;
+}
+h2{
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+section h2::before{
+  content:"|";
+  width:3px;
+}
+table{
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+
+/*ローディング画面*/
+div.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  height: 100vh;
+  width:100%;
+  z-index:3000;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 300ms ease;
+}
+.loader img{
+  display: block;
+  width: 60%;
+}
+.loader::after{
+  animation:loader 0.5s linear infinite;
+  content:"";
+}
+
+/*スクロールアニメーション*/
+.fade-in{
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity,transform ;
+}
+.fade-in-left{
+  transform: translate(-50px , 0);
+}
+.fade-in-right{
+  transform: translate(50px , 0);
+}
+.scroll-in{
+  opacity: 1;
+  transform: translate(0 ,0);
+}
+
+
+/*ページトップ*/
+#page_top{
+  position: fixed;
+  bottom:10px;
+  right:10px;
+  padding:.7rem;
+  text-align: center;
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 2000;
+  opacity: 0.6;
+  transition: 0.1s;
+}
+#page_top a::before{
+  font-family: "Font Awesome 5 Free";
+  content:"\f106";
+  font-weight: 600;
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top:-10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 60px;
+  margin:auto
+}
+#page_top a::after{
+  content:"TOP";
+  font-size:1rem;
+  position: absolute;
+  top:50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+#page_top.show{
+  opacity: 0.6;
+  transform: none;
+}
+html{
+  scroll-behavior:smooth;
+} 
+
+
+/*ヘッダーナビゲーション*/
+.header{
+  height: 50px;
+  width:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 888;
+}
+.header__inner{
+  display: flex;
+  padding: 8px 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.headerLogo{
+  width:45%;
+}
+.header__nav{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width:100%;
+  height: 100vh;
+  background-color: #fff;
+  transform:translateX(100%);
+  transition: ease,.4s;
+}
+.header__nav.active{
+  transform: translateX(0);
+}
+.nav-items{
+  display: block;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 0;
+}
+.nav-items__item a{
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.header__hamburger{
+  width: 48px;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 999;
+}
+.header__hamburger span{
+  width:100%;
+  height: 1px;
+  background-color: #fff;
+  position: relative;
+  display: block;
+  transition: ease .4s;
+}
+.header__hamburger span:nth-child(1){
+  top:0;
+}
+.header__hamburger span:nth-child(2){
+  margin:8px 0;
+}
+.header__hamburger span:nth-child(3){
+  top:0;
+}
+.header__hamburger.active span:nth-child(1){
+  top:10px;
+  transform: rotate(45deg);
+  background-color: #333;
+}
+.header__hamburger.active span:nth-child(2){
+  opacity: 0;
+}
+.header__hamburger.active span:nth-child(3){
+  top:-7px;
+  transform: rotate(-45deg);
+  background-color: #333;
+}
+.hamburger__title{
+  padding: 16px;
+}
+.hamburgerLogo{
+  width:40%;
+}
+.nav-items__item a{
+  color: #333;
+}
+.pc-nav{
+  display: none;
+}
+
+.header.scroll-nav{
+  background-color: #000;
+}
+
+/*ビジュアル*/
+.visual{
+  background-image: url("../img/sp.png");
+  height:100vh;
+}
+.visual p{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  height:100vh;
+}
+
+
+/*うさぎ珈琲店*/
+
+
+
+/*こだわり*/
+.coffee img,.lunch img{
+  display: block;
+  width:100%;
+}
+.coffee{
+  margin-bottom: 20px;
+}
+.lunch{
+  margin-top: 20px;
+}
+
+/*メニュー*/
+.menu_drink,.menu_lunch{
+  text-align: center;
+  margin-top: 16px;
+}
+.menu_drink span{
+  display: block;
+  margin-bottom: 16px;
+}
+dl.menu{
+  width:85%;
+  margin:0 auto;
+}
+dl.menu div{
+  display: flex;
+  justify-content: space-between;
+  margin:5px 0;
+  padding:5px 0;
+  position: relative;
+}
+dl.menu div::after{
+  content:"";
+  display: block;
+  position: absolute;
+  top:50%;
+  width: 100%;
+  border-bottom: solid 1px #333;
+  z-index: 1;
+}
+dl.menu dt{
+  margin: 0;
+  padding: 0 5px 0 0;
+  background-color: #fff;
+  z-index: 2;
+  text-align: left;
+}
+dl.menu dd{
+  margin:0;
+  padding: 0 0 0 5px;
+  background-color: #fff;
+  z-index: 2;
+  text-align: right;
+}
+
+/*店舗情報*/
+
+
+/*フッター*/
+.footer{
+  background-image: url("../img/visual.jpg");
+  padding: 16px;
+}
+.footer_nav{
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  margin-top: 16px;
+}
+.footer h1{
+  width:40%;
+}
+.footer__nav li a{
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.footer h1 a img{
+  display: block;
+}
+.sns{
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.sns a i{
+  width: 30px;
+  height: 20px;
+  color: #fff;
+}
+small{
+  display: block;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 960px) {
+  a{
+    color: #fff;
+  }
+  h2{
+    margin-bottom: 40px;
+  }
+  section{
+    width:80%;
+    margin:auto;
+    margin-top: 50px;
+    padding:70px 0;
+  }
+  section:last-child{
+    margin-bottom: 120px;
+  }
+  /*ナビゲーション*/
+  .pc-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  .hamburgerLogo{
+    width: 65%;
+  }
+  .pc-nav-items{
+    display: flex;
+    justify-content: center;
+    width:60%;
+  }
+  .header__inner{
+    display: none;
+  }
+
+  /*ビジュアル*/
+  .visual{
+    background-image: url("../img/pc.png");
+    background-size: cover;
+  }
+
+  /*珈琲店について*/
+
+  /*こだわり*/
+  .obs{
+    display: flex;
+  }
+  .coffee img,.lunch img{
+    width:45%;
+    margin-right: 16px;
+  }
+
+  /*メニュー*/
+
+  /*店舗情報*/
+  .map{
+    display: flex;
+    justify-content: space-between;
+  }
+  iframe{
+    width: 500px;
+  }
+  .shopInfo{
+    width:100%;
+    margin-left: 24px;
+  }
+  .sns a i{
+    font-size: 1.4rem;
+    width:40px;
+  }
+}
